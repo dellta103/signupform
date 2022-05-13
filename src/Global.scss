@@ -1,0 +1,30 @@
+.stepBar {
+  .item {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    &.active {
+      background-color: #d03987;
+      border: transparent;
+      color: white;
+    }
+  }
+  .bar {
+    position: relative;
+    width: 100%;
+    &::after {
+      position: absolute;
+      top: 75%;
+      left: 0;
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: black;
+      z-index: 999999;
+    }
+  }
+}
